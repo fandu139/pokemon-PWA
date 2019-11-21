@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.App-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-text {
+  color: #000000;
+}
