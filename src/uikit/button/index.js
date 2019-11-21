@@ -3,16 +3,20 @@ import { ButtonToolbar, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-function ProductList(props) {
+function ButtonApp({press, titleButton, typeVarian, sizeButton}) {
   return (
     <div className="App">
       <header className="App-button">
         <ButtonToolbar>
-          <Button variant="success" onClick={props.addItem}>Add Item</Button>
+          <Button size={sizeButton} variant={typeVarian} onClick={press}>{titleButton}</Button>
         </ButtonToolbar>
       </header>
     </div>
   );
 }
 
-export default ProductList;
+ButtonApp.defaultProps = {
+  sizeButton: 'sm'
+}
+
+export default ButtonApp;
