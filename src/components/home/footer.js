@@ -2,6 +2,9 @@
 import * as React from "react";
 import styled from "styled-components";
 import theme from "../../config/styleConst";
+import Flex from "../../uikit/flex";
+import ButtonCostum from "../../uikit/button"
+import IFRender from "../../lib/ifrender";
 
 export const StyledFooter = styled.footer`
   position: fixed;
@@ -16,15 +19,65 @@ export const StyledFooter = styled.footer`
   font-weight: normal;
 `;
 
+const StyledFlex = styled(Flex)`
+  > * {
+    flex: 1;
+  }
+
+  > *:first-child {
+    margin-right: ${('4dp', 'px')};
+  }
+
+  > *:last-child {
+    margin-left: ${('4dp', 'px')};
+  }
+`
+
 /**
  * @param {String} variant
  * @param {String} keyword
  * @param {Object} notifications
  * @return {React.Node}
  */
-function Footer({ variant, keyword, notifications }) {
+function Footer({ variant, keyword, notifications, dataFilter, data, setData, category, setCategory }) {
+
+  function groubArray(data){
+    let concatArray = [...new Set(data)];
+    return concatArray
+  }
+  
+  function concatDataArray(data){
+    let concatArray = []; 
+    data.map( item => {
+      concatArray = concatArray.concat(item.types)
+    })
+  
+    return groubArray(concatArray)
+  }
+
+  function handleCategory(){
+    setCategory(concatDataArray(data))
+  }
+
+  function handleRemoveCategory(){
+    setData(dataFilter)
+    setCategory('')
+  }
+
   return (
-    <StyledFooter data-testid="footer-component">{notifications}</StyledFooter>
+    <StyledFooter data-testid="footer-component">
+      <StyledFlex justifyContent="space-between" alignItems="center">
+        <IFRender
+          condition={category === ''}
+          ifComponent={
+            <ButtonCostum typeVarian="success" press={() => handleCategory()} titleButton={"Filter By Type Pokemon"}/>
+          }
+          elseComponent={
+            <ButtonCostum typeVarian="error" press={() => handleRemoveCategory()} titleButton={"Remove Filter"}/>
+          }
+        />
+      </StyledFlex>
+    </StyledFooter>
   );
 }
 
