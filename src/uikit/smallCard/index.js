@@ -1,13 +1,11 @@
 // @flow
 import * as React from "react";
-import IFRender from "../../lib/ifrender";
 import Paragraph from "../paragraph";
 import theme from "../../config/styleConst";
 import styled from "styled-components";
 import Flex from "../flex";
 import Card from "../card";
 import Image from "../image";
-import Rating from "../rating";
 import {
   Link
 } from "react-router-dom";
@@ -51,21 +49,6 @@ const StyleGroupText = styled.div`
   margin-bottom: ${"2dp"};
 `;
 
-const StyledParagraph = styled(Paragraph)`
-  color: ${props => (props.fontColor ? props.fontColor : theme.colors.black)};
-  padding: ${props => (props.padding ? props.padding : "0.2rem 0")};
-  white-space: pre-line;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: normal;
-`;
-
-const StyledPrice = styled(StyledParagraph)`
-  font-size: ${props => props.fontSize};
-  text-decoration: ${props => (props.lineThrough ? "line-through" : "none")};
-  font-weight: normal;
-`;
-
 const StyledTextArea = styled.span`
   margin-left: ${"4dp"};
   font-size: ${props => props.fontSize};
@@ -97,31 +80,12 @@ function SmallCard({
   types
 }) {
 
-  let resistantManipulate = resistant.join(', ');
-  let weaknessesManipulate = weaknesses.join(', ');
-
   return (
-    <StyledCard data-testid="product-card-list">
+    <StyledCard data-testid="pokemon-data-list">
       <Link to={`/detail/${id}`}>
         <ImageWrapper justifyContent="center" alignItems="center">
           <Image source={image} alt={imageAlt} width={'50%'} />
         </ImageWrapper>
-        {/* <DetailsWrapper>
-          <StyleGroupText>
-            <Paragraph
-              fontColor={theme.colors.orange}
-              fontSize={"16px"}
-              fontWeight="bold"
-            >
-              <StyledTextArea fontSize={("10px", "rem")}>
-                Resistant : {resistantManipulate}
-              </StyledTextArea>
-              <StyledTextArea fontSize={("10px", "rem")}>
-                Weaknesses : {resistantManipulate}
-              </StyledTextArea>
-            </Paragraph>
-          </StyleGroupText>
-        </DetailsWrapper> */}
       </Link>
 
       <DetailsWrapper>
