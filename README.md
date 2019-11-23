@@ -28,3 +28,4 @@ This Code writen whth hooks method, you can look this documentation [Hooks]([rea
 1. Clone this repositori
 2. Write command in your `yarn install` or `npm install`
 3. Runs the app in your browser. Write [http://localhost:3000](http://localhost:3000), Display is very good if adjusted to the appearance of a mobile phone, that is 240X320	QVGA (Quarter VGA) until 3840X2160	4K / UHD (Ultra HD).
+4. If you run `test`, you can run command `npm run test` 
