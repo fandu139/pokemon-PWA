@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Pokemon SnaphShoot Home Home 1`] = `
+Array [
+  <main
+    className="sc-iwsKbI iVbEbB"
+  >
+    <div
+      className="sc-bdVaJa eTWqhe"
+    >
+      <div
+        className="App"
+      >
+        <header
+          className="App-header"
+        >
+          <div
+            className="sc-bdVaJa haSTJE sc-VigVT gXCxGH"
+          >
+            <div
+              className="lazyload-placeholder"
+              style={
+                Object {
+                  "height": undefined,
+                }
+              }
+            />
+          </div>
+          <p
+            className="App-text"
+          >
+            Loading. Please Wait ......
+          </p>
+        </header>
+      </div>
+    </div>
+  </main>,
+  <footer
+    className="sc-gZMcBi hAFNZL"
+    data-testid="footer-component"
+  >
+    <div
+      className="sc-bdVaJa eMKTXw sc-gqjmRU kONQNA"
+    >
+      <div
+        className="App"
+      >
+        <header
+          className="App-button"
+        >
+          <div
+            className="btn-toolbar"
+            role="toolbar"
+          >
+            <button
+              className="btn btn-success btn-sm"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              Filter By Type Pokemon
+            </button>
+          </div>
+        </header>
+      </div>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Home Pokemon SnaphShoot Home Home Loading 1`] = `
+Array [
+  <main
+    className="sc-iwsKbI iVbEbB"
+  >
+    <div
+      className="sc-bdVaJa eTWqhe"
+    >
+      <div
+        className="App"
+      >
+        <header
+          className="App-header"
+        >
+          <div
+            className="sc-bdVaJa haSTJE sc-VigVT gXCxGH"
+          >
+            <div
+              className="lazyload-placeholder"
+              style={
+                Object {
+                  "height": undefined,
+                }
+              }
+            />
+          </div>
+          <p
+            className="App-text"
+          >
+            Loading. Please Wait ......
+          </p>
+        </header>
+      </div>
+    </div>
+  </main>,
+  <footer
+    className="sc-gZMcBi hAFNZL"
+    data-testid="footer-component"
+  >
+    <div
+      className="sc-bdVaJa eMKTXw sc-gqjmRU kONQNA"
+    >
+      <div
+        className="App"
+      >
+        <header
+          className="App-button"
+        >
+          <div
+            className="btn-toolbar"
+            role="toolbar"
+          >
+            <button
+              className="btn btn-success btn-sm"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              Filter By Type Pokemon
+            </button>
+          </div>
+        </header>
+      </div>
+    </div>
+  </footer>,
+]
+`;

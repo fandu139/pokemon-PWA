@@ -37,3 +37,43 @@ export function queryGQL(totalData){
     }
   `
 }
+
+export function queryGQLPokemon(id){
+  return `
+    query pokemon{
+      pokemon(id: "${id}") {
+        id
+        name
+        number
+        classification
+        types
+        resistant
+        attacks {
+          fast {
+            name
+            type
+            damage
+          }
+          special {
+            name
+            type
+            damage
+          }
+        }
+        weaknesses
+        fleeRate
+        maxCP
+        evolutions {
+          id
+          number
+        }
+        evolutionRequirements{
+          amount
+          name
+        }
+        maxHP
+        image
+      }
+    }
+  `
+}

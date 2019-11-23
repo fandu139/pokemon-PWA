@@ -33,47 +33,46 @@ const StyledFlex = styled(Flex)`
   }
 `
 
+export function groubArray(data){
+  let concatArray = [...new Set(data)];
+  return concatArray
+}
+
+export function concatDataArray(data){
+  let concatArray = []; 
+  data.map( item => {
+    concatArray = concatArray.concat(item.types)
+  })
+
+  return groubArray(concatArray)
+}
+
+export function handleCategory(data, setCategory){
+  return setCategory(concatDataArray(data))
+}
+
+export function handleRemoveCategory({setData, dataFilter, setCategory}){
+  setData(dataFilter)
+  return setCategory('')
+}
+
 /**
  * @param {String} variant
  * @param {String} keyword
  * @param {Object} notifications
  * @return {React.Node}
  */
-function Footer({ variant, keyword, notifications, dataFilter, data, setData, category, setCategory }) {
-
-  function groubArray(data){
-    let concatArray = [...new Set(data)];
-    return concatArray
-  }
-  
-  function concatDataArray(data){
-    let concatArray = []; 
-    data.map( item => {
-      concatArray = concatArray.concat(item.types)
-    })
-  
-    return groubArray(concatArray)
-  }
-
-  function handleCategory(){
-    setCategory(concatDataArray(data))
-  }
-
-  function handleRemoveCategory(){
-    setData(dataFilter)
-    setCategory('')
-  }
-
+function Footer({ dataFilter, data, setData, category, setCategory }) {
   return (
     <StyledFooter data-testid="footer-component">
       <StyledFlex justifyContent="space-between" alignItems="center">
         <IFRender
           condition={category === ''}
           ifComponent={
-            <ButtonCostum typeVarian="success" press={() => handleCategory()} titleButton={"Filter By Type Pokemon"}/>
+            <ButtonCostum typeVarian="success" press={() => handleCategory(data, setCategory)} titleButton={"Filter By Type Pokemon"}/>
           }
           elseComponent={
-            <ButtonCostum typeVarian="error" press={() => handleRemoveCategory()} titleButton={"Remove Filter"}/>
+            <ButtonCostum typeVarian="error" press={() => handleRemoveCategory({setData, dataFilter, setCategory})} titleButton={"Remove Filter"}/>
           }
         />
       </StyledFlex>

@@ -47,7 +47,7 @@ function getData({page, setData, setDataFilter, setCategory}) {
   });
 }
 
-function PokemonList({ match }) {
+function PokemonList() {
   const [data, setData] = useState('')
   const [page, setPage] = useState(1)
   const [category, setCategory] = useState('')
@@ -72,8 +72,6 @@ function PokemonList({ match }) {
       footer={{
         component: 
         <Footer 
-          variant="pokemon-list" 
-          keyword={title} 
           dataFilter={dataFilter} 
           data={data} 
           setData={setData} 
@@ -86,11 +84,9 @@ function PokemonList({ match }) {
         condition={category !== ''}
         ifComponent={
           <Filter 
-            dataCategory={category} 
-            data={data} 
+            dataCategory={category}
             setData={setData} 
             dataFilter={dataFilter} 
-            setDataFilter={setDataFilter}
           />
         }
       />
