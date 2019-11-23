@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Pokemon Header 1`] = `
+<header
+  className="App-header"
+>
+  <img
+    alt="logo"
+    className="App-logo"
+    src=""
+  />
+  <h1
+    className="App-title"
+  >
+    
+  </h1>
+</header>
+`;
+
+exports[`Home Pokemon Home Header 1`] = `
+<header
+  className="App-header"
+>
+  <img
+    alt="logo"
+    className="App-logo"
+    src=""
+  />
+  <h1
+    className="App-title"
+  >
+    Pokemon Home
+  </h1>
+</header>
+`;
+
+exports[`Home Pokemon Home Loading 1`] = `
+<header
+  className="App-header"
+>
+  <img
+    alt="logo"
+    className="App-logo"
+  />
+  <h1
+    className="App-title"
+  />
+</header>
+`;

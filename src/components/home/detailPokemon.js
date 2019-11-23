@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Flex from "../../uikit/flex";
-import PokemonSmallCard from "../../uikit/smallCard";
+import PokemonDetailCard from "../../uikit/ detailCard";
 import Layout from "../layout";
 import Header from "./header";
 import Footer from "./footer";
@@ -10,11 +10,12 @@ import {
   useParams
 } from "react-router-dom";
 import Loading from "../../uikit/loading"
+import { queryGQLPokemon } from "../../config/schema"
 
 function PokemonDetail({ data }) {
   return data.map(item => {
     return (
-      <PokemonSmallCard
+      <PokemonDetailCard
         key={item.id}
         image={item.image}
         imageAlt={item.name}
@@ -37,43 +38,7 @@ function getDetailData(id, setData){
     url: "https://graphql-pokemon.now.sh/",
     method: "post",
     data: {
-      query: `
-        query pokemon{
-          pokemon(id: "${id}") {
-            id
-            name
-            number
-            classification
-            types
-            resistant
-            attacks {
-              fast {
-                name
-                type
-                damage
-              }
-              special {
-                name
-                type
-                damage
-              }
-            }
-            weaknesses
-            fleeRate
-            maxCP
-            evolutions {
-              id
-              number
-            }
-            evolutionRequirements{
-              amount
-              name
-            }
-            maxHP
-            image
-          }
-        }
-      `
+      query: queryGQLPokemon(id)
     }
   }).then(result => {
     setData([result.data.data.pokemon]);

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshoot Home Loading 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <div
+      className="sc-bdVaJa haSTJE sc-htpNat huMSff"
+    >
+      <div
+        className="lazyload-placeholder"
+        style={
+          Object {
+            "height": undefined,
+          }
+        }
+      />
+    </div>
+  </header>
+</div>
+`;

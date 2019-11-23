@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Pokemon Home Filter SnapShoot 1`] = `
+<div
+  className="sc-bdVaJa eTWqhe"
+>
+  <div
+    className="App"
+  >
+    <header
+      className="App-button"
+    >
+      <div
+        className="btn-toolbar"
+        role="toolbar"
+      >
+        <button
+          className="btn btn-success btn-sm"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Grass
+        </button>
+      </div>
+    </header>
+  </div>
+  <div
+    className="App"
+  >
+    <header
+      className="App-button"
+    >
+      <div
+        className="btn-toolbar"
+        role="toolbar"
+      >
+        <button
+          className="btn btn-success btn-sm"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Poison
+        </button>
+      </div>
+    </header>
+  </div>
+  <div
+    className="App"
+  >
+    <header
+      className="App-button"
+    >
+      <div
+        className="btn-toolbar"
+        role="toolbar"
+      >
+        <button
+          className="btn btn-success btn-sm"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Fire
+        </button>
+      </div>
+    </header>
+  </div>
+  <div
+    className="App"
+  >
+    <header
+      className="App-button"
+    >
+      <div
+        className="btn-toolbar"
+        role="toolbar"
+      >
+        <button
+          className="btn btn-success btn-sm"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Flying
+        </button>
+      </div>
+    </header>
+  </div>
+  <div
+    className="App"
+  >
+    <header
+      className="App-button"
+    >
+      <div
+        className="btn-toolbar"
+        role="toolbar"
+      >
+        <button
+          className="btn btn-success btn-sm"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Water
+        </button>
+      </div>
+    </header>
+  </div>
+  <div
+    className="App"
+  >
+    <header
+      className="App-button"
+    >
+      <div
+        className="btn-toolbar"
+        role="toolbar"
+      >
+        <button
+          className="btn btn-success btn-sm"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Bug
+        </button>
+      </div>
+    </header>
+  </div>
+</div>
+`;

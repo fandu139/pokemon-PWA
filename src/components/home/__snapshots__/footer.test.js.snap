@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Pokemon Home Footer 1`] = `
+<footer
+  className="sc-bwzfXH fEhHCM"
+  data-testid="footer-component"
+>
+  <div
+    className="sc-bdVaJa eMKTXw sc-htpNat iBaOpL"
+  >
+    <div
+      className="App"
+    >
+      <header
+        className="App-button"
+      >
+        <div
+          className="btn-toolbar"
+          role="toolbar"
+        >
+          <button
+            className="btn btn-success btn-sm"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Filter By Type Pokemon
+          </button>
+        </div>
+      </header>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Home Pokemon Home Footer Filter By Type Pokemon Snapshoot 1`] = `
+<footer
+  className="sc-bwzfXH fEhHCM"
+  data-testid="footer-component"
+>
+  <div
+    className="sc-bdVaJa eMKTXw sc-htpNat iBaOpL"
+  >
+    <div
+      className="App"
+    >
+      <header
+        className="App-button"
+      >
+        <div
+          className="btn-toolbar"
+          role="toolbar"
+        >
+          <button
+            className="btn btn-error btn-sm"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Remove Filter
+          </button>
+        </div>
+      </header>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Home Pokemon Home Footer Remove Filter Snapshoot 1`] = `
+<footer
+  className="sc-bwzfXH fEhHCM"
+  data-testid="footer-component"
+>
+  <div
+    className="sc-bdVaJa eMKTXw sc-htpNat iBaOpL"
+  >
+    <div
+      className="App"
+    >
+      <header
+        className="App-button"
+      >
+        <div
+          className="btn-toolbar"
+          role="toolbar"
+        >
+          <button
+            className="btn btn-error btn-sm"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Remove Filter
+          </button>
+        </div>
+      </header>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Home Pokemon Home Footer Snapshoot 1`] = `
+<footer
+  className="sc-bwzfXH fEhHCM"
+  data-testid="footer-component"
+>
+  <div
+    className="sc-bdVaJa eMKTXw sc-htpNat iBaOpL"
+  >
+    <div
+      className="App"
+    >
+      <header
+        className="App-button"
+      >
+        <div
+          className="btn-toolbar"
+          role="toolbar"
+        >
+          <button
+            className="btn btn-success btn-sm"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Filter By Type Pokemon
+          </button>
+        </div>
+      </header>
+    </div>
+  </div>
+</footer>
+`;

@@ -2,25 +2,25 @@ import React from "react";
 import ButtonCostum from "../../uikit/button"
 import Flex from "../../uikit/flex";
 
-function Filter({ dataCategory, data, setData, press, dataFilter, setDataFilter }) {
+export function getFilterData({ item, setData, dataFilter }){
+  const baseArray = [];
 
-  function getFilterData(item){
-    const baseArray = [];
+  dataFilter.map(itemData => {
+    const checkData = itemData.types.includes(item)
+    if(checkData){
+      baseArray.push(itemData)
+    }
+  })
+  return setData(baseArray)
+}
 
-    dataFilter.map(itemData => {
-      const checkData = itemData.types.includes(item)
-      if(checkData){
-        baseArray.push(itemData)
-      }
-    })
-    setData(baseArray)
-  }
+function Filter({ dataCategory, setData, dataFilter }) {
 
   return (
     <Flex justifyContent="space-evenly" flexWrap="wrap">
       {
         dataCategory.map((item, key) => 
-          <ButtonCostum key={key} press={() => getFilterData(item)} typeVarian="success" titleButton={item}/>
+          <ButtonCostum key={key} press={() => getFilterData({ item, setData, dataFilter })} typeVarian="success" titleButton={item}/>
         )
       }
     </Flex>
