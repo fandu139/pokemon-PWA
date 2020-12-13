@@ -5,6 +5,7 @@ import Flex from "../../uikit/flex";
 export function getFilterData({ item, setData, dataFilter }){
   const baseArray = [];
 
+  // eslint-disable-next-line array-callback-return
   dataFilter.map(itemData => {
     const checkData = itemData.types.includes(item)
     if(checkData){

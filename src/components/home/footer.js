@@ -40,6 +40,7 @@ export function groubArray(data){
 
 export function concatDataArray(data){
   let concatArray = []; 
+  // eslint-disable-next-line array-callback-return
   data.map( item => {
     concatArray = concatArray.concat(item.types)
   })
